@@ -15,6 +15,14 @@ sendo-feed のリポジトリ（[sendo](https://github.com/sendo-feed/sendo)、[
 - 公開前の日本語のコミットは、そのまま残す（履歴は書き換えない）。
 - 識別子（変数名・関数名・ファイル名など）は最初から英語にする。
 
+## 開発環境
+
+Windows、WSL、macOS のどれでも開発できるようにする。
+
+- 改行コードは LF に揃える。各リポジトリの `.gitattributes` で指定しているので、git の設定（`core.autocrlf`）に関係なく LF でコミットされ、LF でチェックアウトされる。
+- Windows では、WSL の中（Linux 側のファイルシステム、例：`~/ghq/...`）にクローンするのがおすすめ。`/mnt/c/...` 上だと、ファイルの読み書きやファイル監視が遅くなる。
+- ファイル名の大文字・小文字だけを変えるときは `git mv` を使う。Windows と macOS のファイルシステムは、既定で大文字・小文字を区別しない。
+
 ## コミットメッセージ
 
 [Conventional Commits 1.0.0](https://www.conventionalcommits.org/ja/v1.0.0/) を土台にする。
