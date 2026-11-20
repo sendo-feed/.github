@@ -1,0 +1,43 @@
+name: 作業（1 本の PR）
+description: 1 本の PR に収まる作業。PR と 1 対 1 にする。大きい作業のサブ Issue にも使う。
+body:
+  - type: markdown
+    attributes:
+      value: |
+        1 Issue ＝ 1 PR。受け入れ条件は PR の単位で書く。
+        1 本の PR に収まらないときは「親（大きい作業）」を使い、サブ Issue に分ける。
+        詳しくは CONTRIBUTING.md の「始める前に」を参照。
+  - type: textarea
+    id: goal
+    attributes:
+      label: やりたいこと
+      description: 何を・どこまで。1〜2 文ずつ書く。
+    validations:
+      required: true
+  - type: textarea
+    id: non-goals
+    attributes:
+      label: やらないこと
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 受け入れ条件：確かめる入力と期待する結果
+      description: 入力は実在のものを使う。
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: 受け入れ条件：対象外
+      description: なければ「なし」と書く。
+    validations:
+      required: true
+  - type: input
+    id: parent
+    attributes:
+      label: 親 Issue
+      description: 任意。親 Issue があれば番号を書く（例：#12）。サブ Issue としての登録は、GitHub のサブ Issue の機能で行う。
+    validations:
+      required: false
