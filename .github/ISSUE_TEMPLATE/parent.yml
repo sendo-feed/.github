@@ -1,0 +1,29 @@
+name: 親（大きい作業）
+description: 1 本の PR に収まらない作業。サブ Issue に分ける。親 Issue には PR を結ばない。
+body:
+  - type: markdown
+    attributes:
+      value: |
+        親 Issue には PR を結ばない。サブ Issue がすべて閉じたら閉じる。
+        受け入れ条件は、サブ Issue に書く。
+        詳しくは CONTRIBUTING.md の「始める前に」を参照。
+  - type: textarea
+    id: goal
+    attributes:
+      label: やりたいこと
+      description: 何を・どこまで。1〜2 文ずつ書く。
+    validations:
+      required: true
+  - type: textarea
+    id: non-goals
+    attributes:
+      label: やらないこと
+    validations:
+      required: true
+  - type: textarea
+    id: sub-issues
+    attributes:
+      label: サブ Issue の一覧と順番
+      description: サブ Issue を作ってから埋めてよい。決定（docs/decisions/）の変更は、それだけで 1 つのサブ Issue にする。
+    validations:
+      required: true
